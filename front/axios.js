@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const db = axios.create({
-  baseURL: "http://api-server:3001/",
+  baseURL: "http://165.232.85.189/api/",
   // baseURL: "http://6c5c-142-184-84-68.ngrok.io/recipes",
 });
 
