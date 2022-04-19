@@ -19,7 +19,7 @@ services:
     networks:
       - mern-app
    
-   proxy:
+  proxy:
     image: nginx:alpine
     container_name: web-proxy
     restart: unless-stopped
