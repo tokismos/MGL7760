@@ -1,12 +1,14 @@
 // require("dotenv").config();
 const express = require("express");
 const app = express();
-
+const path = require("path");
+app.use(express.static(path.join(__dirname, "/front/build")));
 const mongoose = require("mongoose");
 const mainRouter = require("./routes/mainRoute");
 const cors = require("cors")({
   origin: "*",
 });
+
 const port = process.env.PORT || 3000;
 app.use(cors);
 const MONGODB_URI =
