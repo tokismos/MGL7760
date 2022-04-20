@@ -26,6 +26,8 @@ jobs:
         script: |
          cd MGL7760
          git pull https://github.com/tokismos/MGL7760
+         cd front
+         yarn test
          docker-compose up --build
 
 
