@@ -28,7 +28,7 @@ jobs:
          git pull https://github.com/tokismos/MGL7760
          cd front
          npm test
-         docker-compose up --build
+         docker-compose up -d --build
 
 
          
