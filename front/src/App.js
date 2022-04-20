@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { db } from "./axios";
 import { useState } from "react";
+import Input from "@mui/material/Input";
 
 function App() {
   const [name, setName] = useState();
@@ -30,18 +31,26 @@ function App() {
       style={{
         borderWidth: 20,
         borderColor: "black",
-
+        flexDirection: "column",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
       }}
     >
+      <label style={{ fontSize: 40, fontWeight: "bold", marginBottom: "20px" }}>
+        Projet de session – Environnement de développement
+      </label>
       <div
         style={{
           width: "500px",
           height: "500px",
           backgroundColor: "gray",
+          padding: "30px",
+          border: "10px",
+          borderColor: "black",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <form
@@ -51,7 +60,7 @@ function App() {
             justifyContent: "space-between",
           }}
         >
-          <label>Enter your name </label>
+          <label>Veuillez entrer votre nom :</label>
           <input
             type="text"
             onChange={(e) => {
@@ -60,11 +69,29 @@ function App() {
             }}
           />
         </form>
-        <div>
-          <button onClick={() => add(text)}>Add to DB</button>
+        <div
+          style={{
+            display: "flex",
+            marginTop: "50px",
+            justifyContent: "center",
+          }}
+        >
+          <button style={{ marginRight: "20px" }} onClick={() => add(text)}>
+            Add to DB
+          </button>
           <button onClick={get}>Get from DB</button>
         </div>
-        {name && "Hello " + name}
+        <label
+          style={{
+            fontSize: 20,
+            textAlign: "center",
+            justifyContent: "center",
+            display: "flex",
+            marginTop: "50px",
+          }}
+        >
+          {name && "Hello " + name}
+        </label>
       </div>
     </div>
   );
