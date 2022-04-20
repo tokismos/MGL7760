@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import { db } from "./axios";
 import { useState } from "react";
-import Input from "@mui/material/Input";
 
 function App() {
   const [name, setName] = useState();
