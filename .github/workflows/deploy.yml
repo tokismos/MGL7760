@@ -17,7 +17,7 @@ jobs:
     steps:
      - name: Testing
        run: |
- 
+         cd /front
          yarn test
      - name: connecting to server with SSH
        uses: appleboy/ssh-action@master
