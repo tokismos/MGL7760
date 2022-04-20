@@ -22,7 +22,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         username: ${{ secrets.SSH_USERNAME }}
      - name: testing  
-        run:|
+        script:|
          git pull https://github.com/tokismos/MGL7760
          cd MGL7760
          cd front
