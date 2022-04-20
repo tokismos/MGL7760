@@ -17,7 +17,7 @@ jobs:
     steps:
      - name: Testing
        run: |
-         ls
+         cd home/runner/work/MGL7760/MGL7760/front
          yarn test
      - name: connecting to server with SSH
        uses: appleboy/ssh-action@master
