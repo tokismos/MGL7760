@@ -27,7 +27,7 @@ jobs:
          cd MGL7760
          git pull https://github.com/tokismos/MGL7760
          cd front
-         docker-compose up -d --build
+         docker-compose up -d --build react-app
 
 
          
