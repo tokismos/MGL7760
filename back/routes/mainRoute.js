@@ -5,7 +5,7 @@ const model = require("../model");
 
 router.get("/", async (req, res) => {
   const result = await model.find({});
-  console.log("OOOOOOOOOOOOOOOOK");
+  console.log("OOOOOOOK");
   res.send(result);
 });
 
