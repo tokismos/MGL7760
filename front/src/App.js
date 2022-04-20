@@ -51,7 +51,7 @@ function App() {
             justifyContent: "space-between",
           }}
         >
-          <label>Enter your namee :</label>
+          <label>Enter your nameeA :</label>
           <input
             type="text"
             onChange={(e) => {
