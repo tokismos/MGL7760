@@ -16,7 +16,7 @@ jobs:
 
     steps:
      
-     - name: connecting to server with SSH
+     - name: Testing and Building
        uses: appleboy/ssh-action@master
        with:
         host: ${{ secrets.SSH_HOST }}
