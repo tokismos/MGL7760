@@ -24,8 +24,8 @@ jobs:
         
         
         script: |
-         git pull https://github.com/tokismos/MGL7760
          cd MGL7760
+         git pull https://github.com/tokismos/MGL7760
          docker-compose -d up
 
         
