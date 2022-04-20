@@ -15,21 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - name: Testing
-       run: |
-         cd home/runner/work/MGL7760/MGL7760/front
-         yarn test
+     
      - name: connecting to server with SSH
        uses: appleboy/ssh-action@master
        with:
         host: ${{ secrets.SSH_HOST }}
         key: ${{ secrets.SSH_KEY }}
         username: ${{ secrets.SSH_USERNAME }}
-   
+ 
         run: |
-         
-         git clone https://github.com/tokismos/MGL7760
-         cd MGL7760
+         git pull https://github.com/tokismos/MGL7760
+
+         cd /MGL7760/front
+         yarn test
+         cd ../..  
+         cd /MGL7760
          docker-compose up --build
 
 
