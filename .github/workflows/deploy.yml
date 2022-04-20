@@ -15,20 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - name: executing remote ssh commands using password
+     - name: connecting to server with SSH
        uses: appleboy/ssh-action@master
        with:
         host: ${{ secrets.SSH_HOST }}
         key: ${{ secrets.SSH_KEY }}
         username: ${{ secrets.SSH_USERNAME }}
         
-        
-        script: |
-        
-         cd MGL7760
+     - name: testing  
+        script:|
          git pull https://github.com/tokismos/MGL7760
-         docker-compose up --build
+         cd MGL7760
+         cd front
+         yarn test
 
+         
             
    
    
