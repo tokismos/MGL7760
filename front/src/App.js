@@ -62,7 +62,7 @@ function App() {
         </form>
         <div>
           <button onClick={() => add(text)}>Add to DB</button>
-          <button onClick={get}>Get from dsdDB</button>
+          <button onClick={get}>Get from DB</button>
         </div>
         {name && "Hello " + name}
       </div>
