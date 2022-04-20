@@ -23,8 +23,8 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
      - name: testing  
        run: |
-        cd MGL7760
-        cd front
+        cd /MGL7760
+        cd /front
         yarn test
 
          
